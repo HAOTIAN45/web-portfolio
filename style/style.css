@@ -1,0 +1,254 @@
+:root {
+    --primary: #000000;
+    --bg: #010101;
+    --txt: #fff;
+    --span: aqua;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary);
+    color: var(--txt);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    border-bottom: 1px solid var(--span);
+    background-color: var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--txt);
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: var(--span);
+}
+
+.navbar .navbar-nav a {
+    color: var(--txt);
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--span);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.8);
+}
+
+#hamburger-menu {
+    color: var(--txt);
+    display: none;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../img/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 5em;
+    text-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+    line-height: 1.2;
+    mix-blend-mode: difference;
+}
+
+.hero .content span {
+    color: var(--span);
+}
+
+.hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: var(--txt);
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+}
+
+.about {
+    padding: 8rem 7% 1.4rem;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span {
+    color: var(--span);
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content p {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.about .row .content .skills {
+    display: flex;
+    gap: 7rem;
+}
+
+.about .row .content ul li {
+    margin: 0 1.2rem 0.5rem;
+}
+
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0 1rem;
+    border-top: 1px solid var(--span);
+    border-bottom: 1px solid var(--span);
+}
+
+
+
+
+/* Responsif */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--bg);
+        width: 100%;
+        height: 34vh;
+        transition: 0.5s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0em;
+        background-color: var(--bg);
+    }
+
+    .navbar .navbar-nav a {
+        text-align: center;
+        color: var(--txt);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 1 0.5rem;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+    .about .row .content {
+        padding: 0;
+    }
+
+    .about .row .content p {
+        text-align: justify;
+    }
+
+    .about .row .about-img img {
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 2%;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
