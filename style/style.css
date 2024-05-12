@@ -121,17 +121,23 @@ body {
     box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
 }
 
-.about {
+.about,
+.skill,
+.contact {
     padding: 8rem 7% 1.4rem;
 }
 
-.about h2 {
+.about h2,
+.skill h2,
+.contact h2 {
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 3rem;
 }
 
-.about h2 span {
+.about h2 span,
+.skill h2 span,
+.contact h2 span {
     color: var(--span);
 }
 
@@ -168,6 +174,83 @@ body {
     margin: 0 1.2rem 0.5rem;
 }
 
+.skill .row .hobby p {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.contact {
+    padding-bottom: 10rem;
+}
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    background-color: #080808;
+    border-radius: 1rem;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.contact .row form:hover {
+    box-shadow: 1px 1px 3px var(--span);
+    border-radius: 1rem;
+}
+
+.contact .row .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: var(--primary);
+    border: 1px solid var(--txt);
+    border-radius: 1rem;
+    padding-left: 2rem;
+    transition: 0.2s;
+}
+
+.contact .row .input-group:hover {
+    border: 1px solid var(--span);
+    box-shadow: 1px 1px 3px var(--span);
+}
+
+.contact .row .input-group input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    background: none;
+    color: var(--txt);
+}
+
+.contact .row form .btn-submit {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: var(--bg);
+    background-color: var(--span);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+    transition: 0.5s;
+}
+
+.contact .row form .btn-submit:hover {
+    /* box-shadow: 1px 1px 10px var(--span); */
+    box-shadow: 0 0 5px var(--span),
+              0 0 10px var(--span),
+              0 0 15px var(--span),
+              0 0 20px var(--span);
+}
+
 footer {
     background-color: var(--primary);
     text-align: center;
@@ -175,7 +258,6 @@ footer {
     border-top: 1px solid var(--span);
     border-bottom: 1px solid var(--span);
 }
-
 
 
 
